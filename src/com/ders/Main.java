@@ -3,6 +3,7 @@ package com.ders;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -10,6 +11,7 @@ public class Main {
         boolean fullext = true;
         boolean iniext = true; //welcome
         boolean accext = true;
+        Client client = new Client();
         Account hesap = new Account();
 
         while(fullext) {
@@ -26,7 +28,8 @@ public class Main {
                             System.out.println("Invalid username: " + userName);
                         } else {
                             if(true){/*tanımlı değilse*/
-                                hesap = new Account();
+                                client = new Client();
+                                //hesap = new Account();
                                 System.out.println("Account not found, creating one.\nAccount number: " + hesap.getAccountNumber() + "\nBalance: " + hesap.getBalance());
                             }
                         /* else {// tanım ilse
@@ -50,6 +53,7 @@ public class Main {
             }
 
             // Kullanıcı giriş yaptı, işlemler yapacak
+            // Account list
             // Deposit - 1
             // Withdraw - 2
             // exit - 3
@@ -59,6 +63,11 @@ public class Main {
                     System.out.println("What would you like to do? Enter the number in front of the action you'd like to do.\n1.Deposit\n2.Withdraw\n3.Logout");
                     String job = reader.readLine();
 
+                    ArrayList<Account> clientAccounts = client.getAccounts();
+                    if(clientAccounts.isEmpty()){
+                        // create new account
+                        
+                    }
 
                     switch (job) {
                         case "1" -> {
@@ -93,6 +102,9 @@ public class Main {
                             accext = false;
                             iniext = true;
                         }
+
+
+
                         default -> System.out.println("Invalid selection.");
                     }
 
