@@ -66,7 +66,7 @@ public class Main {
                     ArrayList<Account> clientAccounts = client.getAccounts();
                     if(clientAccounts.isEmpty()){
                         // create new account
-                        
+                            
                     }
 
                     switch (job) {
