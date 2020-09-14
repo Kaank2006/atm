@@ -1,4 +1,4 @@
-# ATM-STAGING
+# ATM
 ---
 The staging branch of a basic and non-secure pseudo-banking CLI.  
 Currently, user data is not saved.  
