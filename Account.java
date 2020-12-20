@@ -29,4 +29,7 @@ public class Account {
 
         this.balance -= withdraw;
     }
+    public void setBalance(long balance){
+        this.balance = balance;
+    }
 }
