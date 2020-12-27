@@ -2,28 +2,41 @@ package com.ders;
 
 public class Account {
     private int accountNumber = 1;
-    private int balance = 0;
+    private long balance = 0L;
+    private String accountName;
 
-    public int getAccountNumber(){
-        return accountNumber;
+    public Account() {
     }
 
-    /*public void setAccountNumber(int newAccountNumber){
-        accountNumber = newAccountNumber;
-    }*/
-
-    public int getBalance(){
-        return balance;
+    public int getAccountNumber() {
+        return this.accountNumber;
     }
 
-    public void setBalance(int newBalance){
-        balance = newBalance;
+    public void setAccountNumber(int accountNumber){
+        this.accountNumber = accountNumber;
     }
-    public void addBalance(int deposit){
-        balance = balance + deposit;
+
+    public long getBalance() {
+        return this.balance;
     }
-    public void deductBalance(int withdraw){
-        balance = balance - withdraw;
+    public String getAccountName(){
+        return this.accountName;
+    }
+    public void addBalance(int deposit) {
+
+        this.balance += deposit;
+    }
+
+    public void deductBalance(int withdraw) {
+
+        this.balance -= withdraw;
+    }
+    public void setBalance(long balance){
+        this.balance = balance;
+    }
+    public void setAccountName(String accountName){
+        this.accountName = accountName;
     }
 
 }
+
